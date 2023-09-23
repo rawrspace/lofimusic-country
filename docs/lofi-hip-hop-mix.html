@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta httpequiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="Maxence Charriere">
+<meta name="description" content="Listen to Lo-fi music radio Lofi Hip Hop Mix on the Lofimusic open-source player: an installable Progressive Web app (PWA) written in Go (Golang).">
+<meta content="lofi, lo-fi, music, lofimusic, chill, chilled, beats, relax, study, sleep, hiphop, app, pwa" name="keywords">
+<meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+<meta content="http://127.0.0.1:44769/lofi-hip-hop-mix" property="og:url">
+<meta property="og:title" content="Lofi Hip Hop Mix Radio">
+<meta property="og:description" content="Listen to Lo-fi music radio Lofi Hip Hop Mix on the Lofimusic open-source player: an installable Progressive Web app (PWA) written in Go (Golang).">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://lofimusic.app/web/covers/lofi-hip-hop-mix.png">
+<title>
+Lofi Hip Hop Mix Radio
+</title>
+<link rel="icon" type="image/png" href="/web/logo.png">
+<link rel="apple-touch-icon" href="/web/logo.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link type="text/css" rel="stylesheet" href="/app.css">
+<script defer="true" src="/wasm_exec.js"></script>
+<script defer="true" src="/app.js"></script>
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap">
+<link type="text/css" rel="stylesheet" href="/web/lofimusic.css">
+<script>
+			var isOnYouTubeIframeAPIReady = false;
+			function onYouTubeIframeAPIReady() {
+				isOnYouTubeIframeAPIReady = true;
+			}
+			</script>
+</head>
+<body>
+<div>
+<aside id="app-wasm-loader" class="goapp-app-info">
+<img id="app-wasm-loader-icon" class="goapp-logo goapp-spin" src="/web/logo.png">
+<p id="app-wasm-loader-label" class="goapp-label">
+Lofi music player to work, study and relax.
+</p>
+</aside>
+<div id="app-pre-render">
+<main class="radio fill">
+<div class="youtube radio-player fill">
+<div class="youtube-video">
+<div id="youtube-player" class="unselectable">
+<script src="https://www.youtube.com/iframe_api"></script>
+</div>
+</div>
+<div class="youtube-noplay fill background-overlay">
+<aside class="loader hide hspace-out vspace-stretch">
+<div data-goapp="Stack" id class="fill" style="display:flex;justify-content:center;align-items:center;">
+<div style="width:78px;height:78px;">
+<div class="icon active" style="width:76px;height:76px;"></div>
+</div>
+<div class="hspace-in">
+<header class="h2">
+Buffering
+</header>
+<p class>
+Lofi Hip Hop Mix
+</p>
+</div>
+</div>
+</aside>
+</div>
+<div data-goapp="Stack" id class="youtube-controls hspace-out vspace-top vspace-bottom" style="display:flex;justify-content:center;align-items:center;">
+<div class="youtube-left-space"></div>
+<button class="control disabled youtube-back">
+<div style="width:18px;height:18px;">
+<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+	</svg>
+</div>
+</button>
+<button class="control  ">
+<div style="width:18px;height:18px;">
+<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</button>
+<button class="control  control-main">
+<div style="width:30px;height:30px;">
+<svg style="width:30px;height:30px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M14.83,13.41L13.42,14.82L16.55,17.95L14.5,20H20V14.5L17.96,16.54L14.83,13.41M14.5,4L16.54,6.04L4,18.59L5.41,20L17.96,7.46L20,9.5V4M10.59,9.17L5.41,4L4,5.41L9.17,10.58L10.59,9.17Z" />
+	</svg>
+</div>
+</button>
+<button class="control  ">
+<div style="width:18px;height:18px;">
+<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+		<path fill="currentColor" d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z" />
+	</svg>
+</div>
+</button>
+<div class="youtube-volume ">
+<input max="100" value="0" id="youtube-volume" type="range" min="0">
+</div>
+</div>
+</div>
+<div data-goapp-ui="shell" id class="radio-shell fill">
+<div style="display:flex;width:100%;height:100%;overflow:hidden;" id="goapp-shell-c1d9c8b7-8940-43b6-9f80-b62d56eab028">
+<div style="position:relative;display:none;flex-shrink:0;flex-basis:375px;overflow:hidden;">
+<div class="nav fill unselectable ">
+<div data-goapp="Stack" id class="app-title hspace-out" style="display:flex;justify-content:flex-start;align-items:center;">
+<header>
+<a class="hApp focus glow" href="/">
+Study Music
+</a>
+</header>
+</div>
+<nav class="nav-content">
+<div class="nav-radios">
+<div data-goapp="Stack" id class="nav-radios-stack" style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="hspace-out">
+<a class="link heading fit glow " title href="/autumns-beats" id="autumns-beats">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Autumn&#39;s Beats
+</div>
+</div>
+</a>
+<a class="link heading fit glow " title href="/chillhop-essentials" id="chillhop-essentials">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Chillhop Essentials
+</div>
+</div>
+</a>
+<a id="chilling-on-the-space" class="link heading fit glow " title href="/chilling-on-the-space">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Chilling on the Space
+</div>
+</div>
+</a>
+<a id="deep-focus-for-studying" class="link heading fit glow " title href="/deep-focus-for-studying">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Deep Focus For Studying
+</div>
+</div>
+</a>
+<a id="disney-lofi" class="link heading fit glow " title href="/disney-lofi">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Disney Lofi
+</div>
+</div>
+</a>
+<a title href="/disney-relaxing-piano" id="disney-relaxing-piano" class="link heading fit glow ">
+<div style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack" id class>
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Disney Relaxing Piano
+</div>
+</div>
+</a>
+<a id="endless-sunday" class="link heading fit glow " title href="/endless-sunday">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Endless Sunday
+</div>
+</div>
+</a>
+<a title href="/lofi-hip-hop-mix" id="lofi-hip-hop-mix" class="link heading fit glow focus">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Lofi Hip Hop Mix
+</div>
+</div>
+</a>
+<a id="nintendo-lofi" class="link heading fit glow " title href="/nintendo-lofi">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Nintendo Lofi
+</div>
+</div>
+</a>
+<a id="rainy-day-coffee-shop" class="link heading fit glow " title href="/rainy-day-coffee-shop">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Rainy Day Coffee Shop
+</div>
+</div>
+</a>
+<a id="relaxing-guitar-music" class="link heading fit glow " title href="/relaxing-guitar-music">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Relaxing Guitar Music
+</div>
+</div>
+</a>
+<a title href="/relaxing-piano-for-sleep" id="relaxing-piano-for-sleep" class="link heading fit glow ">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Relaxing Piano for Sleep
+</div>
+</div>
+</a>
+<a href="/star-wars-lofi" id="star-wars-lofi" class="link heading fit glow " title>
+<div id class style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Star Wars Lofi
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div style="position:relative;display:none;flex-shrink:0;flex-basis:375px;overflow:hidden;"></div>
+<div style="position:relative;flex-grow:1;overflow:hidden;">
+<aside class="radio-update app-title hspace-out">
+<div class="fill" style="display:flex;justify-content:flex-end;align-items:center;" data-goapp="Stack" id></div>
+</aside>
+<div class="hspace-out vspace-content">
+<article class="info fill no-overflow">
+<header class="info-title  center fit">
+<h1 class="h1 glow">
+Lofi Hip Hop Mix
+</h1>
+<div class="info-title-separator"></div>
+<div class="info-links" style="display:flex;justify-content:center;align-items:center;" data-goapp="Stack" id></div>
+</header>
+</article>
+</div>
+</div>
+<div style="position:relative;display:none;flex-shrink:0;flex-basis:372px;overflow:hidden;"></div>
+</div>
+<div style="display:block;position:absolute;top:0;left:0;cursor:pointer;">
+<div class="goapp-shell-hamburger-button-default">
+☰
+</div>
+</div>
+<div style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;">
+<div class="nav fill unselectable background-overlay">
+<div data-goapp="Stack" id class="app-title hspace-out" style="display:flex;justify-content:flex-start;align-items:center;">
+<header>
+<a class="hApp focus glow" href="/">
+Study Music
+</a>
+</header>
+</div>
+<nav class="nav-content">
+<div class="nav-radios">
+<div id class="nav-radios-stack" style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack">
+<div class="hspace-out">
+<a id="autumns-beats" class="link heading fit glow " title href="/autumns-beats">
+<div id class style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Autumn&#39;s Beats
+</div>
+</div>
+</a>
+<a href="/chillhop-essentials" id="chillhop-essentials" class="link heading fit glow " title>
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Chillhop Essentials
+</div>
+</div>
+</a>
+<a href="/chilling-on-the-space" id="chilling-on-the-space" class="link heading fit glow " title>
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Chilling on the Space
+</div>
+</div>
+</a>
+<a class="link heading fit glow " title href="/deep-focus-for-studying" id="deep-focus-for-studying">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Deep Focus For Studying
+</div>
+</div>
+</a>
+<a id="disney-lofi" class="link heading fit glow " title href="/disney-lofi">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Disney Lofi
+</div>
+</div>
+</a>
+<a id="disney-relaxing-piano" class="link heading fit glow " title href="/disney-relaxing-piano">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Disney Relaxing Piano
+</div>
+</div>
+</a>
+<a id="endless-sunday" class="link heading fit glow " title href="/endless-sunday">
+<div id class style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Endless Sunday
+</div>
+</div>
+</a>
+<a href="/lofi-hip-hop-mix" id="lofi-hip-hop-mix" class="link heading fit glow focus" title>
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Lofi Hip Hop Mix
+</div>
+</div>
+</a>
+<a id="nintendo-lofi" class="link heading fit glow " title href="/nintendo-lofi">
+<div id class style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Nintendo Lofi
+</div>
+</div>
+</a>
+<a href="/rainy-day-coffee-shop" id="rainy-day-coffee-shop" class="link heading fit glow " title>
+<div style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack" id class>
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Rainy Day Coffee Shop
+</div>
+</div>
+</a>
+<a id="relaxing-guitar-music" class="link heading fit glow " title href="/relaxing-guitar-music">
+<div data-goapp="Stack" id class style="display:flex;justify-content:flex-start;align-items:center;">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Relaxing Guitar Music
+</div>
+</div>
+</a>
+<a id="relaxing-piano-for-sleep" class="link heading fit glow " title href="/relaxing-piano-for-sleep">
+<div id class style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack">
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Relaxing Piano for Sleep
+</div>
+</div>
+</a>
+<a id="star-wars-lofi" class="link heading fit glow " title href="/star-wars-lofi">
+<div style="display:flex;justify-content:flex-start;align-items:center;" data-goapp="Stack" id class>
+<div class="link-icon">
+<div style="width:24px;height:24px;">
+<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    	<path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+	</svg>
+</div>
+</div>
+<div>
+Star Wars Lofi
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>

@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	menuWidth = 282
+	menuWidth = 375
 )
 
 type radio struct {

@@ -32,14 +32,6 @@ func getLiveRadios() []liveRadio {
 			Links: []socialLink{},
 		},
 		{
-			Slug:  "chillhop-essentials",
-			Name:  "Chillhop Essentials",
-			Owner: "Chillhop Music",
-			URL:   "https://youtu.be/CSOsK6Dy58U",
-			Cards: []string{},
-			Links: []socialLink{},
-		},
-		{
 			Slug:  "chilling-on-the-space",
 			Name:  "Chilling on the Space",
 			Owner: "Lofi for Life",

@@ -63,15 +63,6 @@ func getLiveRadios() []liveRadio {
 			Cards: []string{},
 			Links: []socialLink{},
 		},
-		//Endless Sunday - D_uLM5i0Z4c - Chillhop Music
-		{
-			Slug:  "endless-sunday",
-			Name:  "Endless Sunday",
-			Owner: "Chillhop Music",
-			URL:   "https://youtu.be/D_uLM5i0Z4c",
-			Cards: []string{},
-			Links: []socialLink{},
-		},
 		//Lofi Hip Hop Mix - wzBn3gKbhxk - Lofi Cat
 		{
 			Slug:  "lofi-hip-hop-mix",

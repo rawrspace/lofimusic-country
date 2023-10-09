@@ -63,6 +63,15 @@ func getLiveRadios() []liveRadio {
 			Cards: []string{},
 			Links: []socialLink{},
 		},
+		//Harry Potter Lofi - cuDzX5jIcAE - Chill Astronaut
+		{
+			Slug:  "harry-potter-lofi",
+			Name:  "Harry Potter Lofi",
+			Owner: "Chill Astronaut",
+			URL:   "https://youtu.be/cuDzX5jIcAE",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
 		//Lofi Hip Hop Mix - wzBn3gKbhxk - Lofi Cat
 		{
 			Slug:  "lofi-hip-hop-mix",
@@ -112,6 +121,15 @@ func getLiveRadios() []liveRadio {
 			Name:  "Star Wars Lofi",
 			Owner: "Chill Astronaut",
 			URL:   "https://youtu.be/wv38obj0D_k",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		//Taylor Swift Piano - teX3yyB9PQc - Juan L. Otaiza
+		{
+			Slug:  "taylor-swift-piano",
+			Name:  "Taylor Swift Piano",
+			Owner: "Juan L. Otaiza",
+			URL:   "https://youtu.be/teX3yyB9PQc",
 			Cards: []string{},
 			Links: []socialLink{},
 		},

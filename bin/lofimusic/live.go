@@ -39,6 +39,33 @@ func getLiveRadios() []liveRadio {
 			Cards: []string{},
 			Links: []socialLink{},
 		},
+		//Christmas Fireplace - kszQ_pb1lU8 - OCB Relax Music
+		{
+			Slug:  "christmas-fireplace",
+			Name:  "Christmas Fireplace",
+			Owner: "OCB Relax Music",
+			URL:   "https://youtu.be/kszQ_pb1lU8",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		//Christmas Instrumental - 0cGLoDhfaWs - Cozy Moments
+		{
+			Slug:  "christmas-instrumental",
+			Name:  "Christmas Instrumental",
+			Owner: "Cozy Moments",
+			URL:   "https://youtu.be/0cGLoDhfaWs",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		//Christmas Jazz - B7nut0m6HBQ - Cozy Coffee Shop
+		{
+			Slug:  "christmas-jazz",
+			Name:  "Christmas Jazz",
+			Owner: "Cozy Coffee Shop",
+			URL:   "https://youtu.be/B7nut0m6HBQ",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
 		{
 			Slug:  "deep-focus-for-studying",
 			Name:  "Deep Focus For Studying",

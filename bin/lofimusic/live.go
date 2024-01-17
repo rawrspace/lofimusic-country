@@ -23,14 +23,14 @@ func (r liveRadio) youtubeID() string {
 
 func getLiveRadios() []liveRadio {
 	radios := []liveRadio{
-		{
-			Slug:  "autumns-beats",
-			Name:  "Autumn's Beats",
-			Owner: "Lofi for Life",
-			URL:   "https://youtu.be/RN0zF_Uh0nY",
-			Cards: []string{},
-			Links: []socialLink{},
-		},
+		// {
+		// 	Slug:  "autumns-beats",
+		// 	Name:  "Autumn's Beats",
+		// 	Owner: "Lofi for Life",
+		// 	URL:   "https://youtu.be/RN0zF_Uh0nY",
+		// 	Cards: []string{},
+		// 	Links: []socialLink{},
+		// },
 		{
 			Slug:  "chilling-on-the-space",
 			Name:  "Chilling on the Space",
@@ -39,30 +39,66 @@ func getLiveRadios() []liveRadio {
 			Cards: []string{},
 			Links: []socialLink{},
 		},
-		//Christmas Fireplace - kszQ_pb1lU8 - OCB Relax Music
+		// Celtic Study Music https://www.youtube.com/watch?v=4ICggPlpRQA
 		{
-			Slug:  "christmas-fireplace",
-			Name:  "Christmas Fireplace",
-			Owner: "OCB Relax Music",
-			URL:   "https://youtu.be/kszQ_pb1lU8",
+			Slug:  "celtic-study-music",
+			Name:  "Celtic Study Music",
+			Owner: "Visual Melodies",
+			URL:   "https://youtu.be/4ICggPlpRQA",
 			Cards: []string{},
 			Links: []socialLink{},
 		},
-		//Christmas Instrumental - 0cGLoDhfaWs - Cozy Moments
+		// Charlie Brown https://www.youtube.com/watch?v=xj0KQijdGEs
 		{
-			Slug:  "christmas-instrumental",
-			Name:  "Christmas Instrumental",
-			Owner: "Cozy Moments",
-			URL:   "https://youtu.be/0cGLoDhfaWs",
+			Slug:  "charlie-brown",
+			Name:  "Charlie Brown",
+			Owner: "A Worker's Playlist",
+			URL:   "https://youtu.be/xj0KQijdGEs",
 			Cards: []string{},
 			Links: []socialLink{},
 		},
-		//Christmas Jazz - B7nut0m6HBQ - Cozy Coffee Shop
+		// //Christmas Fireplace - kszQ_pb1lU8 - OCB Relax Music
+		// {
+		// 	Slug:  "christmas-fireplace",
+		// 	Name:  "Christmas Fireplace",
+		// 	Owner: "OCB Relax Music",
+		// 	URL:   "https://youtu.be/kszQ_pb1lU8",
+		// 	Cards: []string{},
+		// 	Links: []socialLink{},
+		// },
+		// //Christmas Instrumental - 0cGLoDhfaWs - Cozy Moments
+		// {
+		// 	Slug:  "christmas-instrumental",
+		// 	Name:  "Christmas Instrumental",
+		// 	Owner: "Cozy Moments",
+		// 	URL:   "https://youtu.be/0cGLoDhfaWs",
+		// 	Cards: []string{},
+		// 	Links: []socialLink{},
+		// },
+		// //Christmas Jazz - B7nut0m6HBQ - Cozy Coffee Shop
+		// {
+		// 	Slug:  "christmas-jazz",
+		// 	Name:  "Christmas Jazz",
+		// 	Owner: "Cozy Coffee Shop",
+		// 	URL:   "https://youtu.be/B7nut0m6HBQ",
+		// 	Cards: []string{},
+		// 	Links: []socialLink{},
+		// },
+		// Cozy winter https://youtu.be/_tV5LEBDs7w?si=IvtsBJ5Jr8SIUZFy
 		{
-			Slug:  "christmas-jazz",
-			Name:  "Christmas Jazz",
-			Owner: "Cozy Coffee Shop",
-			URL:   "https://youtu.be/B7nut0m6HBQ",
+			Slug:  "cozy-winter",
+			Name:  "Cozy Winter",
+			Owner: "Lofi Girl",
+			URL:   "https://youtu.be/_tV5LEBDs7w",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		// Disney Jazz https://www.youtube.com/watch?v=UQCCwpiFEkI
+		{
+			Slug:  "disney-jazz",
+			Name:  "Disney Jazz",
+			Owner: "Massimo Roberti",
+			URL:   "https://youtu.be/UQCCwpiFEkI",
 			Cards: []string{},
 			Links: []socialLink{},
 		},
@@ -117,6 +153,51 @@ func getLiveRadios() []liveRadio {
 			Cards: []string{},
 			Links: []socialLink{},
 		},
+		// Ocean Lofi https://www.youtube.com/watch?v=YJEnhffr5Vg
+		{
+			Slug:  "ocean-lofi",
+			Name:  "Ocean Lofi",
+			Owner: "Chill Village",
+			URL:   "https://youtu.be/YJEnhffr5Vg",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		// Ocean Piano https://www.youtube.com/watch?v=QR3lp0ptpy8
+		{
+			Slug:  "ocean-piano",
+			Name:  "Ocean Piano",
+			Owner: "Dream Sounds",
+			URL:   "https://youtu.be/QR3lp0ptpy8",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		// Pirate Study Music https://www.youtube.com/watch?v=EU8Zn5rHIDI
+		{
+			Slug:  "pirate-study-music",
+			Name:  "Pirate Study Music",
+			Owner: "Blessed",
+			URL:   "https://youtu.be/EU8Zn5rHIDI",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		// Pirate https://youtu.be/ttZ1zQqMY6U?feature=shared
+		{
+			Slug:  "pirate",
+			Name:  "Pirates of the Caribbean",
+			Owner: "Ambient Worlds",
+			URL:   "https://youtu.be/ttZ1zQqMY6U",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		// Relaxing Spring Music https://www.youtube.com/watch?v=u4pQ7O8uQRw
+		{
+			Slug:  "relaxing-spring-music",
+			Name:  "Relaxing Spring Music",
+			Owner: "Soothing Relaxation",
+			URL:   "https://youtu.be/u4pQ7O8uQRw",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
 		{
 			Slug:  "rainy-day-coffee-shop",
 			Name:  "Rainy Day Coffee Shop",
@@ -139,6 +220,15 @@ func getLiveRadios() []liveRadio {
 			Name:  "Relaxing Piano for Sleep",
 			Owner: "Tazad Beat",
 			URL:   "https://youtu.be/mo14InsSnIc",
+			Cards: []string{},
+			Links: []socialLink{},
+		},
+		// Spring flowers music https://youtu.be/J4Fk0pujVFA?si=kTDhvdmsiNOZfOvx
+		{
+			Slug:  "spring-flowers-music",
+			Name:  "Spring Flowers Music",
+			Owner: "Relaxing Music Films",
+			URL:   "https://youtu.be/J4Fk0pujVFA",
 			Cards: []string{},
 			Links: []socialLink{},
 		},

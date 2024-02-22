@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"strings"
 	"time"
 
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
@@ -69,7 +67,6 @@ func (i *info) OnMount(ctx app.Context) {
 					} else {
 						ticker.Reset(cardVisibleDuration)
 						i.isCardVisible = true
-						i.showNewCard(ctx)
 					}
 				})
 			}
@@ -78,19 +75,6 @@ func (i *info) OnMount(ctx app.Context) {
 }
 
 func (i *info) OnUpdate(ctx app.Context) {
-}
-
-func (i *info) showNewCard(ctx app.Context) {
-	count := len(i.Iradio.Cards)
-	if count == 0 {
-		i.currentCard = -1
-		return
-	}
-
-	i.currentCard++
-	if i.currentCard >= count {
-		i.currentCard = 0
-	}
 }
 
 func (i *info) Render() app.UI {
@@ -120,32 +104,11 @@ func (i *info) Render() app.UI {
 						Center().
 						Middle().
 						Content(
-							app.Range(i.Iradio.Links).Slice(func(j int) app.UI {
-								l := i.Iradio.Links[j]
-								return newInfoLink().
-									Help(fmt.Sprintf("Visit %s's %s.",
-										strings.Title(i.Iradio.Owner),
-										strings.Title(l.Slug),
-									)).
-									Href(l.URL).
-									Icon(newSVGIcon().
-										Size(infoLinkIconSize).
-										RawSVG(socialIcon(l.Slug)))
-							}),
+							app.H2().
+								Class("h2").
+								Class("glow").
+								Text(i.Iradio.Owner),
 						),
 				),
-			app.Range(i.Iradio.Cards).Slice(func(j int) app.UI {
-				cardVisibility := ""
-				if j == i.currentCard && i.Iplaying && i.isCardVisible {
-					cardVisibility = "info-card-show"
-				}
-
-				return app.P().
-					Class("info-card").
-					Class("glow").
-					Class("focus").
-					Class(cardVisibility).
-					Text(i.Iradio.Cards[j])
-			}),
 		)
 }

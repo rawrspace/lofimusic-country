@@ -12,8 +12,6 @@ type liveRadio struct {
 	Name    string
 	Owner   string
 	URL     string
-	Cards   []string
-	Links   []socialLink
 	AddedAt time.Time
 }
 
@@ -23,232 +21,390 @@ func (r liveRadio) youtubeID() string {
 
 func getLiveRadios() []liveRadio {
 	radios := []liveRadio{
-		// {
-		// 	Slug:  "autumns-beats",
-		// 	Name:  "Autumn's Beats",
-		// 	Owner: "Lofi for Life",
-		// 	URL:   "https://youtu.be/RN0zF_Uh0nY",
-		// 	Cards: []string{},
-		// 	Links: []socialLink{},
-		// },
+		//Boot Scootin Boogie - Brooks & Dunn - d05tQrhNMkA
 		{
-			Slug:  "chilling-on-the-space",
-			Name:  "Chilling on the Space",
-			Owner: "Lofi for Life",
-			URL:   "https://youtu.be/2tX5RpHxY74",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "boot-scootin-boogie",
+			Name:  "Boot Scootin Boogie",
+			Owner: "Brooks & Dunn",
+			URL:   "https://youtu.be/d05tQrhNMkA",
 		},
-		// Celtic Study Music https://www.youtube.com/watch?v=4ICggPlpRQA
+		//Tracy Byrd - Watermelon Crawl - BFPdX2TFiIE
 		{
-			Slug:  "celtic-study-music",
-			Name:  "Celtic Study Music",
-			Owner: "Visual Melodies",
-			URL:   "https://youtu.be/4ICggPlpRQA",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "watermelon-crawl",
+			Name:  "Watermelon Crawl",
+			Owner: "Tracy Byrd",
+			URL:   "https://youtu.be/BFPdX2TFiIE",
 		},
-		// Charlie Brown https://www.youtube.com/watch?v=xj0KQijdGEs
+		//Alan Jackson - Chattahoochee - JW5UEW2kYvc
 		{
-			Slug:  "charlie-brown",
-			Name:  "Charlie Brown",
-			Owner: "A Worker's Playlist",
-			URL:   "https://youtu.be/xj0KQijdGEs",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "chattahoochee",
+			Name:  "Chattahoochee",
+			Owner: "Alan Jackson",
+			URL:   "https://youtu.be/JW5UEW2kYvc",
 		},
-		// //Christmas Fireplace - kszQ_pb1lU8 - OCB Relax Music
-		// {
-		// 	Slug:  "christmas-fireplace",
-		// 	Name:  "Christmas Fireplace",
-		// 	Owner: "OCB Relax Music",
-		// 	URL:   "https://youtu.be/kszQ_pb1lU8",
-		// 	Cards: []string{},
-		// 	Links: []socialLink{},
-		// },
-		// //Christmas Instrumental - 0cGLoDhfaWs - Cozy Moments
-		// {
-		// 	Slug:  "christmas-instrumental",
-		// 	Name:  "Christmas Instrumental",
-		// 	Owner: "Cozy Moments",
-		// 	URL:   "https://youtu.be/0cGLoDhfaWs",
-		// 	Cards: []string{},
-		// 	Links: []socialLink{},
-		// },
-		// //Christmas Jazz - B7nut0m6HBQ - Cozy Coffee Shop
-		// {
-		// 	Slug:  "christmas-jazz",
-		// 	Name:  "Christmas Jazz",
-		// 	Owner: "Cozy Coffee Shop",
-		// 	URL:   "https://youtu.be/B7nut0m6HBQ",
-		// 	Cards: []string{},
-		// 	Links: []socialLink{},
-		// },
-		// Cozy winter https://youtu.be/_tV5LEBDs7w?si=IvtsBJ5Jr8SIUZFy
+		//Garth Brooks- Friends In Low Places - mvCgSqPZ4EM
 		{
-			Slug:  "cozy-winter",
-			Name:  "Cozy Winter",
-			Owner: "Lofi Girl",
-			URL:   "https://youtu.be/_tV5LEBDs7w",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "friends-in-low-places",
+			Name:  "Friends In Low Places",
+			Owner: "Garth Brooks",
+			URL:   "https://youtu.be/mvCgSqPZ4EM",
 		},
-		// Disney Jazz https://www.youtube.com/watch?v=UQCCwpiFEkI
+		//Reba McEntire - Fancy - FUN0U80hELo
 		{
-			Slug:  "disney-jazz",
-			Name:  "Disney Jazz",
-			Owner: "Massimo Roberti",
-			URL:   "https://youtu.be/UQCCwpiFEkI",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "fancy",
+			Name:  "Fancy",
+			Owner: "Reba McEntire",
+			URL:   "https://youtu.be/FUN0U80hELo",
 		},
+		//Zach Bryan - Hey Driver - o8LTi_zkGuY
 		{
-			Slug:  "deep-focus-for-studying",
-			Name:  "Deep Focus For Studying",
-			Owner: "MITON.W",
-			URL:   "https://youtu.be/c9UK50nrN8c",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "hey-driver",
+			Name:  "Hey Driver",
+			Owner: "Zach Bryan",
+			URL:   "https://youtu.be/o8LTi_zkGuY",
 		},
+		//Dolly Parton - Jolene - Ixrje2rXLMA
 		{
-			Slug:  "disney-lofi",
-			Name:  "Disney Lofi",
-			Owner: "LlamaLoops",
-			URL:   "https://youtu.be/upY2z9fMfVw",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "jolene",
+			Name:  "Jolene",
+			Owner: "Dolly Parton",
+			URL:   "https://youtu.be/Ixrje2rXLMA",
 		},
+		//Zac Brown Band - Chicken Fried - e4ujS1er1r0
 		{
-			Slug:  "disney-relaxing-piano",
-			Name:  "Disney Relaxing Piano",
-			Owner: "kno Piano Music",
-			URL:   "https://youtu.be/g8NVwN0_mks",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "chicken-fried",
+			Name:  "Chicken Fried",
+			Owner: "Zac Brown Band",
+			URL:   "https://youtu.be/e4ujS1er1r0",
 		},
-		//Harry Potter Lofi - cuDzX5jIcAE - Chill Astronaut
+		//Martina McBride - Independence Day - 4VPpAZ9_qAw
 		{
-			Slug:  "harry-potter-lofi",
-			Name:  "Harry Potter Lofi",
-			Owner: "Chill Astronaut",
-			URL:   "https://youtu.be/cuDzX5jIcAE",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "independence-day",
+			Name:  "Independence Day",
+			Owner: "Martina McBride",
+			URL:   "https://youtu.be/4VPpAZ9_qAw",
 		},
-		//Lofi Hip Hop Mix - wzBn3gKbhxk - Lofi Cat
+		//Toby Keith - Should've Been A Cowboy - aIq1LvzSLsk
 		{
-			Slug:  "lofi-hip-hop-mix",
-			Name:  "Lofi Hip Hop Mix",
-			Owner: "Lofi Cat",
-			URL:   "https://youtu.be/wzBn3gKbhxk",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "shouldve-been-a-cowboy",
+			Name:  "Should've Been A Cowboy",
+			Owner: "Toby Keith",
+			URL:   "https://youtu.be/aIq1LvzSLsk",
 		},
-		//Nintendo Lofi - 7JMvn0wfABQ - Helynt
+		//George Strait - Amarillo By Morning - wtVeDaZxAXo
 		{
-			Slug:  "nintendo-lofi",
-			Name:  "Nintendo Lofi",
-			Owner: "Helynt",
-			URL:   "https://youtu.be/7JMvn0wfABQ",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "amarillo-by-morning",
+			Name:  "Amarillo By Morning",
+			Owner: "George Strait",
+			URL:   "https://youtu.be/wtVeDaZxAXo",
 		},
-		// Ocean Lofi https://www.youtube.com/watch?v=YJEnhffr5Vg
+		//Tim McGraw - I Like It, I Love It - aAZVtj_JsCY
 		{
-			Slug:  "ocean-lofi",
-			Name:  "Ocean Lofi",
-			Owner: "Chill Village",
-			URL:   "https://youtu.be/YJEnhffr5Vg",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "i-like-it-i-love-it",
+			Name:  "I Like It, I Love It",
+			Owner: "Tim McGraw",
+			URL:   "https://youtu.be/aAZVtj_JsCY",
 		},
-		// Ocean Piano https://www.youtube.com/watch?v=QR3lp0ptpy8
+		//Big & Rich - Save A Horse (Ride A Cowboy) - S9ZbuIRPwFg
 		{
-			Slug:  "ocean-piano",
-			Name:  "Ocean Piano",
-			Owner: "Dream Sounds",
-			URL:   "https://youtu.be/QR3lp0ptpy8",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "save-a-horse-ride-a-cowboy",
+			Name:  "Save A Horse (Ride A Cowboy)",
+			Owner: "Big & Rich",
+			URL:   "https://youtu.be/S9ZbuIRPwFg",
 		},
-		// Pirate Study Music https://www.youtube.com/watch?v=EU8Zn5rHIDI
+		//Shania Twain - Any Man Of Mine - 8N2k-gv6xNE
 		{
-			Slug:  "pirate-study-music",
-			Name:  "Pirate Study Music",
-			Owner: "Blessed",
-			URL:   "https://youtu.be/EU8Zn5rHIDI",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "any-man-of-mine",
+			Name:  "Any Man Of Mine",
+			Owner: "Shania Twain",
+			URL:   "https://youtu.be/8N2k-gv6xNE",
 		},
-		// Pirate https://youtu.be/ttZ1zQqMY6U?feature=shared
+		//Nitty Gritty Dirt Band - Fishin' In The Dark - jBRfkxUAyOk
 		{
-			Slug:  "pirate",
-			Name:  "Pirates of the Caribbean",
-			Owner: "Ambient Worlds",
-			URL:   "https://youtu.be/ttZ1zQqMY6U",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "fishin-in-the-dark",
+			Name:  "Fishin' In The Dark",
+			Owner: "Nitty Gritty Dirt Band",
+			URL:   "https://youtu.be/jBRfkxUAyOk",
 		},
-		// Relaxing Spring Music https://www.youtube.com/watch?v=u4pQ7O8uQRw
+		//Wynonna Judd - No One Else On Earth - HfFeNt7a18k
 		{
-			Slug:  "relaxing-spring-music",
-			Name:  "Relaxing Spring Music",
-			Owner: "Soothing Relaxation",
-			URL:   "https://youtu.be/u4pQ7O8uQRw",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "no-one-else-on-earth",
+			Name:  "No One Else On Earth",
+			Owner: "Wynonna Judd",
+			URL:   "https://youtu.be/HfFeNt7a18k",
 		},
+		//Blake Shelton - Austin - bb1DTsxBOfE
 		{
-			Slug:  "rainy-day-coffee-shop",
-			Name:  "Rainy Day Coffee Shop",
-			Owner: "Relaxing Jazz Piano",
-			URL:   "https://youtu.be/0L38Z9hIi5s",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "austin",
+			Name:  "Austin",
+			Owner: "Blake Shelton",
+			URL:   "https://youtu.be/bb1DTsxBOfE",
 		},
+		//Little Big Town - Boondocks - skAOb_EUE_M
 		{
-			Slug:  "relaxing-guitar-music",
-			Name:  "Relaxing Guitar Music",
-			Owner: "Yellow Brick Cinema",
-			URL:   "https://youtu.be/iIjSS_MbCGg",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "boondocks",
+			Name:  "Boondocks",
+			Owner: "Little Big Town",
+			URL:   "https://youtu.be/skAOb_EUE_M",
 		},
-		//Relaxing Piano for Sleep - mo14InsSnIc - Tazad Beat
+		//Brooks & Dunn - Neon Moon - f4sdG5frA0Q
 		{
-			Slug:  "relaxing-piano-for-sleep",
-			Name:  "Relaxing Piano for Sleep",
-			Owner: "Tazad Beat",
-			URL:   "https://youtu.be/mo14InsSnIc",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "neon-moon",
+			Name:  "Neon Moon",
+			Owner: "Brooks & Dunn",
+			URL:   "https://youtu.be/f4sdG5frA0Q",
 		},
-		// Spring flowers music https://youtu.be/J4Fk0pujVFA?si=kTDhvdmsiNOZfOvx
+		//Travis Tritt - It's a Great Day to be Alive - d4tSE2w53ts
 		{
-			Slug:  "spring-flowers-music",
-			Name:  "Spring Flowers Music",
-			Owner: "Relaxing Music Films",
-			URL:   "https://youtu.be/J4Fk0pujVFA",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "its-a-great-day-to-be-alive",
+			Name:  "It's a Great Day to be Alive",
+			Owner: "Travis Tritt",
+			URL:   "https://youtu.be/d4tSE2w53ts",
 		},
-		//Star Wars Lofi - wv38obj0D_k - Chill Astronaut
+		//Clay Walker - If I Could Make a Living - 0q8-CwJYvfA
 		{
-			Slug:  "star-wars-lofi",
-			Name:  "Star Wars Lofi",
-			Owner: "Chill Astronaut",
-			URL:   "https://youtu.be/wv38obj0D_k",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "if-i-could-make-a-living",
+			Name:  "If I Could Make a Living",
+			Owner: "Clay Walker",
+			URL:   "https://youtu.be/0q8-CwJYvfA",
 		},
-		//Taylor Swift Piano - teX3yyB9PQc - Juan L. Otaiza
+		//Conway Twitty - Tight Fittin Jeans - xs1kwVeKcRg
 		{
-			Slug:  "taylor-swift-piano",
-			Name:  "Taylor Swift Piano",
-			Owner: "Juan L. Otaiza",
-			URL:   "https://youtu.be/teX3yyB9PQc",
-			Cards: []string{},
-			Links: []socialLink{},
+			Slug:  "tight-fittin-jeans",
+			Name:  "Tight Fittin Jeans",
+			Owner: "Conway Twitty",
+			URL:   "https://youtu.be/xs1kwVeKcRg",
+		},
+		//The Dance - Garth Brooks - 6FHvP_Yv0wE
+		{
+			Slug:  "the-dance",
+			Name:  "The Dance",
+			Owner: "Garth Brooks",
+			URL:   "https://youtu.be/6FHvP_Yv0wE",
+		},
+		//Garth Brooks - Callin' Baton Rouge - L88rx2j011A
+		{
+			Slug:  "callin-baton-rouge",
+			Name:  "Callin' Baton Rouge",
+			Owner: "Garth Brooks",
+			URL:   "https://youtu.be/L88rx2j011A",
+		},
+		//Shania Twain - Man! I Feel Like A Woman - ZJL4UGSbeFg
+		{
+			Slug:  "man-i-feel-like-a-woman",
+			Name:  "Man! I Feel Like A Woman",
+			Owner: "Shania Twain",
+			URL:   "https://youtu.be/ZJL4UGSbeFg",
+		},
+		//Tim McGraw - Don't Take The Girl - FWaW1IjbmAk
+		{
+			Slug:  "dont-take-the-girl",
+			Name:  "Don't Take The Girl",
+			Owner: "Tim McGraw",
+			URL:   "https://youtu.be/FWaW1IjbmAk",
+		},
+		//Darius Rucker - Wagon Wheel - hvKyBcCDOB4
+		{
+			Slug:  "wagon-wheel",
+			Name:  "Wagon Wheel",
+			Owner: "Darius Rucker",
+			URL:   "https://youtu.be/hvKyBcCDOB4",
+		},
+		//Jamey Johnson - In Color - EYGwxf1gCC4
+		{
+			Slug:  "in-color",
+			Name:  "In Color",
+			Owner: "Jamey Johnson",
+			URL:   "https://youtu.be/EYGwxf1gCC4",
+		},
+		//George Strait - All My Ex's Live In Texas - 9qumxVP8PrE
+		{
+			Slug:  "all-my-exs-live-in-texas",
+			Name:  "All My Ex's Live In Texas",
+			Owner: "George Strait",
+			URL:   "https://youtu.be/9qumxVP8PrE",
+		},
+		//Luke Dick - Polyester - oJwd6cu-Fi0
+		{
+			Slug:  "polyester",
+			Name:  "Polyester",
+			Owner: "Luke Dick",
+			URL:   "https://youtu.be/oJwd6cu-Fi0",
+		},
+		//Miranda Lambert - Somethin' Bad - o4Yzj-m_SBk
+		{
+			Slug:  "somethin-bad",
+			Name:  "Somethin' Bad",
+			Owner: "Miranda Lambert",
+			URL:   "https://youtu.be/o4Yzj-m_SBk",
+		},
+		//Miranda Lambert - Gunpowder & Lead - aWQdEDtveB0
+		{
+			Slug:  "gunpowder-and-lead",
+			Name:  "Gunpowder & Lead",
+			Owner: "Miranda Lambert",
+			URL:   "https://youtu.be/aWQdEDtveB0",
+		},
+		//Luke Combs - Beer Never Broke My Heart - 7Lb9dq-JZFI
+		{
+			Slug:  "beer-never-broke-my-heart",
+			Name:  "Beer Never Broke My Heart",
+			Owner: "Luke Combs",
+			URL:   "https://youtu.be/7Lb9dq-JZFI",
+		},
+		//Luke Combs - Hurricane - BixwVsiDdZM
+		{
+			Slug:  "hurricane",
+			Name:  "Hurricane",
+			Owner: "Luke Combs",
+			URL:   "https://youtu.be/BixwVsiDdZM",
+		},
+		//Luke Combs - She Got the Best of Me - a2a9fgPI_PI
+		{
+			Slug:  "she-got-the-best-of-me",
+			Name:  "She Got the Best of Me",
+			Owner: "Luke Combs",
+			URL:   "https://youtu.be/a2a9fgPI_PI",
+		},
+		//Cody Johnson - Dirt Cheap - ZKCwYbPrAGg
+		{
+			Slug:  "dirt-cheap",
+			Name:  "Dirt Cheap",
+			Owner: "Cody Johnson",
+			URL:   "https://youtu.be/ZKCwYbPrAGg",
+		},
+		//Cody Johnson - The Painter - ur1cb_OztPQ
+		{
+			Slug:  "the-painter",
+			Name:  "The Painter",
+			Owner: "Cody Johnson",
+			URL:   "https://youtu.be/ur1cb_OztPQ",
+		},
+		//Jo Dee Messina - Heads Carolina, Tails California - FvLjJE7Bt88
+		{
+			Slug:  "heads-carolina-tails-california",
+			Name:  "Heads Carolina, Tails California",
+			Owner: "Jo Dee Messina",
+			URL:   "https://youtu.be/FvLjJE7Bt88",
+		},
+		//Cody Johnson & Reba McEntire - Dear Rodeo - RlwREmok31o
+		{
+			Slug:  "dear-rodeo",
+			Name:  "Dear Rodeo",
+			Owner: "Cody Johnson & Reba McEntire",
+			URL:   "https://youtu.be/RlwREmok31o",
+		},
+		//Josh Abbott Band - Oh, Tonight - CTlQzKOOkeU
+		{
+			Slug:  "oh-tonight",
+			Name:  "Oh, Tonight",
+			Owner: "Josh Abbott Band",
+			URL:   "https://youtu.be/CTlQzKOOkeU",
+		},
+		//Josh Abbott Band - My Texas (feat. Pat Green) - z9wV-bI8Lwk
+		{
+			Slug:  "my-texas",
+			Name:  "My Texas (feat. Pat Green)",
+			Owner: "Josh Abbott Band",
+			URL:   "https://youtu.be/z9wV-bI8Lwk",
+		},
+		//Josh Abbott Band - She's Like Texas - yapf2QvFHfw
+		{
+			Slug:  "shes-like-texas",
+			Name:  "She's Like Texas",
+			Owner: "Josh Abbott Band",
+			URL:   "https://youtu.be/yapf2QvFHfw",
+		},
+		//George Strait - Baby Blue - dfOaLpIrC20
+		{
+			Slug:  "baby-blue",
+			Name:  "Baby Blue",
+			Owner: "George Strait",
+			URL:   "https://youtu.be/dfOaLpIrC20",
+		},
+		//Luke Combs - Fast Car - fL7O5wW4wC0
+		{
+			Slug:  "fast-car",
+			Name:  "Fast Car",
+			Owner: "Luke Combs",
+			URL:   "https://youtu.be/fL7O5wW4wC0",
+		},
+		//Waylon Jennings - Mammas, Don't Let Your Babies Grow Up to Be Cowboys - qZTwjljm5qc
+		{
+			Slug:  "mammas-dont-let-your-babies-grow-up-to-be-cowboys",
+			Name:  "Mammas, Don't Let Your Babies Grow Up to Be Cowboys",
+			Owner: "Waylon Jennings",
+			URL:   "https://youtu.be/qZTwjljm5qc",
+		},
+		//Jon Pardi - Dirt On My Boots - gCxbgqyC2Wg
+		{
+			Slug:  "dirt-on-my-boots",
+			Name:  "Dirt On My Boots",
+			Owner: "Jon Pardi",
+			URL:   "https://youtu.be/gCxbgqyC2Wg",
+		},
+		//Brothers Osborne - It Ain’t My Fault - E5RDEXpc8OY
+		{
+			Slug:  "it-aint-my-fault",
+			Name:  "It Ain’t My Fault",
+			Owner: "Brothers Osborne",
+			URL:   "https://youtu.be/E5RDEXpc8OY",
+		},
+		//Brothers Osborne - Stay A Little Longer - zY6cMMtLCcQ
+		{
+			Slug:  "stay-a-little-longer",
+			Name:  "Stay A Little Longer",
+			Owner: "Brothers Osborne",
+			URL:   "https://youtu.be/zY6cMMtLCcQ",
+		},
+		//Hank Williams, Jr. - A Country Boy Can Survive - 3cQNkIrg-Tk
+		{
+			Slug:  "a-country-boy-can-survive",
+			Name:  "A Country Boy Can Survive",
+			Owner: "Hank Williams, Jr.",
+			URL:   "https://youtu.be/3cQNkIrg-Tk",
+		},
+		//Alabama - Mountain Music - M6WfM0cXWSQ
+		{
+			Slug:  "mountain-music",
+			Name:  "Mountain Music",
+			Owner: "Alabama",
+			URL:   "https://youtu.be/M6WfM0cXWSQ",
+		},
+		//Hank Williams, Jr. - Family Tradition - GdDyEqnhvNI
+		{
+			Slug:  "family-tradition",
+			Name:  "Family Tradition",
+			Owner: "Hank Williams, Jr.",
+			URL:   "https://youtu.be/GdDyEqnhvNI",
+		},
+		//Toby Keith - Red Solo Cup - BKZqGJONH68
+		{
+			Slug:  "red-solo-cup",
+			Name:  "Red Solo Cup",
+			Owner: "Toby Keith",
+			URL:   "https://youtu.be/BKZqGJONH68",
+		},
+		//Jimmy Buffett - Margaritaville - mrF4nF8VUb4
+		{
+			Slug:  "margaritaville",
+			Name:  "Margaritaville",
+			Owner: "Jimmy Buffett",
+			URL:   "https://youtu.be/mrF4nF8VUb4",
+		},
+		//Jimmy Buffett - Cheeseburger In Paradise - dmDBBu3CTOA
+		{
+			Slug:  "cheeseburger-in-paradise",
+			Name:  "Cheeseburger In Paradise",
+			Owner: "Jimmy Buffett",
+			URL:   "https://youtu.be/dmDBBu3CTOA",
+		},
+		//Jimmy Buffett - Fins - kxh8YQKruAQ
+		{
+			Slug:  "fins",
+			Name:  "Fins",
+			Owner: "Jimmy Buffett",
+			URL:   "https://youtu.be/kxh8YQKruAQ",
 		},
 	}
 
@@ -256,47 +412,5 @@ func getLiveRadios() []liveRadio {
 		return strings.Compare(radios[a].Name, radios[b].Name) < 0
 	})
 
-	for _, r := range radios {
-		sort.Slice(r.Links, func(a, b int) bool {
-			return strings.Compare(r.Links[a].Slug, r.Links[b].Slug) < 0
-		})
-	}
-
 	return radios
-}
-
-type socialLink struct {
-	Slug string
-	URL  string
-}
-
-func socialIcon(slug string) string {
-	switch slug {
-	case "youtube":
-		return youtubeSVG
-
-	case "reddit":
-		return redditSVG
-
-	case "facebook":
-		return facebookSVG
-
-	case "instagram":
-		return instagramSVG
-
-	case "twitter":
-		return twitterSVG
-
-	case "spotify":
-		return spotifySVG
-
-	case "discord":
-		return discordSVG
-
-	case "website":
-		return websiteSVG
-
-	default:
-		return linkSVG
-	}
 }

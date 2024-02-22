@@ -175,7 +175,7 @@ func (p *youTubePlayer) onStateChange(ctx app.Context, args []app.Value) {
 		p.isPlaying = false
 		p.isBuffering = false
 		if p.err == nil {
-			p.play(ctx)
+			p.onSongEnded(ctx)
 		}
 
 	case playing:
@@ -359,6 +359,9 @@ func (p *youTubePlayer) onBackClicked(ctx app.Context, e app.Event) {
 	app.Window().Get("history").Call("back")
 }
 
+func (p *youTubePlayer) onSongEnded(ctx app.Context) {
+	ctx.Navigate("/")
+}
 func (p *youTubePlayer) onShuffleClicked(ctx app.Context, e app.Event) {
 	ctx.Navigate("/")
 }

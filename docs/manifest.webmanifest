@@ -1,7 +1,7 @@
 {
-  "short_name": "Study Music",
-  "name": "Study Music",
-  "description": "Lofi music player",
+  "short_name": "Country Music",
+  "name": "Country Music",
+  "description": "Country music player",
   "icons": [
     {
       "src": "/web/logo.png",
